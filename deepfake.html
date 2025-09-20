@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deepfake Analyzer - Truth Detector</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <i class="fas fa-shield-alt"></i>
+          <span>Truth Detector</span>
+        </div>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="fake-news.html">Fake News</a></li>
+          <li><a href="deepfake.html" class="active">Deepfake</a></li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+
+    <section class="detector-page">
+      <div class="container">
+        <div class="page-header">
+          <h1><i class="fas fa-video"></i> Deepfake Analyzer</h1>
+          <p>Detect synthetic and manipulated video content using AI</p>
+        </div>
+
+        <div class="detector-container">
+          <div class="upload-section">
+            <div class="upload-tabs">
+              <button class="tab-btn active" data-tab="upload">
+                Upload Video
+              </button>
+              <button class="tab-btn" data-tab="url">Video URL</button>
+            </div>
+
+            <div class="tab-content active" id="upload-tab">
+              <div class="file-upload" id="fileUpload">
+                <div class="upload-icon">
+                  <i class="fas fa-cloud-upload-alt"></i>
+                </div>
+                <h3>Drop video file here</h3>
+                <p>Or click to browse files</p>
+                <p class="file-info">
+                  Supported formats: MP4, AVI, MOV (Max: 100MB)
+                </p>
+                <input type="file" id="videoFile" accept="video/*" hidden />
+              </div>
+            </div>
+
+            <div class="tab-content" id="url-tab">
+              <input
+                type="url"
+                id="videoUrl"
+                placeholder="Enter video URL (YouTube, Vimeo, etc.)"
+                class="url-input"
+              />
+            </div>
+
+            <div class="analyze-section">
+              <button id="analyzeVideoBtn" class="btn btn-primary">
+                <i class="fas fa-search"></i>
+                Analyze Video
+              </button>
+            </div>
+          </div>
+
+          <div class="video-preview" id="videoPreview">
+            <video id="previewVideo" controls style="display: none">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="results-section" id="videoResultsSection">
+            <div class="results-header">
+              <h3>Analysis Results</h3>
+            </div>
+            <div class="results-content" id="videoResultsContent">
+              <div class="no-results">
+                <i class="fas fa-info-circle"></i>
+                <p>Upload a video file or enter URL to begin analysis</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-cards">
+          <div class="info-card">
+            <h3>Detection Methods</h3>
+            <ul>
+              <li>Facial landmark analysis</li>
+              <li>Temporal inconsistency detection</li>
+              <li>Artifact pattern recognition</li>
+              <li>Blinking and micro-expression analysis</li>
+            </ul>
+          </div>
+          <div class="info-card">
+            <h3>Analysis Features</h3>
+            <ul>
+              <li>Frame-by-frame inspection</li>
+              <li>Audio-visual synchronization check</li>
+              <li>Compression artifact analysis</li>
+              <li>Real-time confidence scoring</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
