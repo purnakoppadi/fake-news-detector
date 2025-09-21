@@ -378,7 +378,7 @@ function showError(message) {
 // N8N Workflow Integration (Mock)
 async function sendToN8NWorkflow(data, workflowType) {
   // Mock N8N webhook URL - replace with actual N8N webhook
-  const webhookUrl = `https://your-n8n-instance.com/webhook/${workflowType}`;
+  const webhookUrl = `https://pinkp.app.n8n.cloud/webhook-test/4fed089a-df7e-4ece-94e2-23992e3ad029`;
 
   try {
     const response = await fetch(webhookUrl, {
@@ -489,3 +489,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
